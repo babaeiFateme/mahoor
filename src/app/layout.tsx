@@ -1,14 +1,16 @@
 import { type FC } from 'react'
 import { type Metadata } from 'next'
-import { ColorSchemeScript, MantineProvider } from '@mantine/core'
+import { Button, ColorSchemeScript, MantineProvider } from '@mantine/core'
 import '@mantine/core/styles.css'
-import { iranYekanFonts } from '@core/constants/fonts/iranYekan'
+
 import { mantineThemeObject } from '@core/constants/configs/mantine'
+import { iranYekanFonts } from '@core/constants/fonts/iranYekan'
 
 import '@styles/globals.css'
 
 export const metadata: Metadata = {
-    title: 'Atomic Design Folder Structure',
+    title: ' رستوران ماهور',
+    description: 'بزرگترین رستوران خاورمیانه',
 }
 
 const RootLayout: FC<{ children: JSX.Element }> = ({ children }) => {
@@ -18,7 +20,7 @@ const RootLayout: FC<{ children: JSX.Element }> = ({ children }) => {
                 <ColorSchemeScript />
             </head>
             <body className={`${iranYekanFonts.variable} font-iranYekan`}>
-                <MantineProvider theme={mantineThemeObject}>{children}  سارا موسوی</MantineProvider>
+                <MantineProvider theme={mantineThemeObject}>{children}</MantineProvider>
             </body>
         </html>
     )
